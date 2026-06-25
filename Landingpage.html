@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduLearn | Professional Education Landing Page</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5f7fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ================= NAVBAR ================= */
+header {
+  background: linear-gradient(135deg, #1f3c88, #2563eb);
+  color: white;
+  padding-bottom: 40px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffd166;
+}
+
+/* ================= HERO ================= */
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  padding: 55px 8%;
+  flex-wrap: wrap;
+}
+
+.home-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.home-text h1 {
+  font-size: 44px;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.home-text p {
+  font-size: 18px;
+  max-width: 560px;
+  margin-bottom: 25px;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.home-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: right;
+}
+
+.home-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  display: inline-block;
+  background: #ffd166;
+  color: #222;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ffb703;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.small-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #1f3c88;
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.small-btn:hover {
+  background: #2563eb;
+}
+
+/* ================= SECTIONS ================= */
+section {
+  padding: 70px 8%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  font-size: 34px;
+  color: #1f3c88;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: #555;
+  font-size: 17px;
+}
+
+/* ================= ABOUT ================= */
+.about-content {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.about-card {
+  background: white;
+  width: 500px;
+  max-width: 100%;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border-top: 5px solid #ffd166;
+}
+
+.about-card h3 {
+  color: #1f3c88;
+  margin-bottom: 15px;
+}
+
+/* ================= COURSES ================= */
+.course-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.course-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border-top: 5px solid #2563eb;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+}
+
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.course-card h3 {
+  color: #1f3c88;
+  margin-bottom: 12px;
+}
+
+/* ================= FEATURES ================= */
+.feature-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+.feature-box {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border-top: 5px solid #ffd166;
+  transition: 0.3s;
+}
+
+.feature-box:hover {
+  transform: translateY(-6px);
+}
+
+.feature-box h3 {
+  color: #1f3c88;
+  margin-bottom: 12px;
+}
+
+/* ================= TESTIMONIALS ================= */
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border-left: 5px solid #2563eb;
+  transition: 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+}
+
+.testimonial-card p {
+  color: #444;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.testimonial-card h4 {
+  color: #1f3c88;
+}
+
+/* ================= CTA ================= */
+.cta {
+  padding-top: 10px;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, #1f3c88, #2563eb);
+  color: white;
+  text-align: center;
+  padding: 45px 25px;
+  border-radius: 18px;
+}
+
+.cta-box h2 {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.cta-box p {
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+/* ================= CONTACT ================= */
+.contact-box {
+  background: white;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.contact-box p {
+  margin-bottom: 12px;
+  font-size: 17px;
+  color: #444;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #1f3c88;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  margin-top: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-buttons {
+    justify-content: center;
+  }
+
+  .home-text h1 {
+    font-size: 34px;
+  }
+
+  .section-title h2,
+  .cta-box h2 {
+    font-size: 28px;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">EduLearn</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#features">Why Us</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ================= HOME ================= -->
+    <section class="home" id="home">
+      <div class="home-text">
+        <h1>Learn Smarter, Grow Faster With EduLearn</h1>
+        <p>
+          Join our online learning platform to master web development, Java, Python,
+          and other in-demand skills with expert guidance and practical projects.
+        </p>
+        <div class="hero-buttons">
+          <a href="#courses" class="btn">Explore Courses</a>
+          <a href="#contact" class="btn btn-outline">Get Started</a>
+        </div>
+      </div>
+
+      <div class="home-image">
+        <img src="education.jpg" alt="Students Learning">
+      </div>
+    </section>
+  </header>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="about" id="about">
+    <div class="section-title">
+      <h2>About EduLearn</h2>
+      <p>Empowering students with practical knowledge and future-ready skills.</p>
+    </div>
+
+    <div class="about-content">
+      <div class="about-card">
+        <h3>Who We Are</h3>
+        <p>
+          EduLearn is a modern online education platform focused on providing quality learning
+          experiences for students and beginners. Our mission is to make education accessible,
+          practical, and career-oriented.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h3>Our Vision</h3>
+        <p>
+          We aim to help learners gain confidence in coding, web development, and programming
+          through structured lessons, guided practice, and real-world project building.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COURSES ================= -->
+  <section class="courses" id="courses">
+    <div class="section-title">
+      <h2>Popular Courses</h2>
+      <p>Choose from our beginner-friendly and career-focused courses.</p>
+    </div>
+
+    <div class="course-container">
+      <div class="course-card">
+        <img src="webDevelopment.jpg" alt="Web Development">
+        <h3>Web Development</h3>
+        <p>Learn HTML, CSS, JavaScript and create modern responsive websites from scratch.</p>
+        <a href="#" class="small-btn">Learn More</a>
+      </div>
+
+      <div class="course-card">
+        <img src="java-course.jpg" alt="Java Programming">
+        <h3>Java Programming</h3>
+        <p>Understand Java fundamentals, OOP concepts, and build mini projects with confidence.</p>
+        <a href="#" class="small-btn">Learn More</a>
+      </div>
+
+      <div class="course-card">
+        <img src="python-course.jpg" alt="Python Course">
+        <h3>Python for Beginners</h3>
+        <p>Start your coding journey with Python and explore logic building and automation basics.</p>
+        <a href="#" class="small-btn">Learn More</a>
+      </div>
+
+      <div class="course-card">
+        <img src="ui-ux-course.jpg" alt="UI UX Design">
+        <h3>UI/UX Basics</h3>
+        <p>Learn design principles, layouts, colors, and user-friendly interface design concepts.</p>
+        <a href="#" class="small-btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section class="features" id="features">
+    <div class="section-title">
+      <h2>Why Choose EduLearn?</h2>
+      <p>We focus on practical learning and student success.</p>
+    </div>
+
+    <div class="feature-container">
+      <div class="feature-box">
+        <h3>Expert Guidance</h3>
+        <p>Learn from skilled instructors and get proper support throughout your learning journey.</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>Practical Projects</h3>
+        <p>Build real mini-projects and improve your coding confidence with hands-on practice.</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>Flexible Learning</h3>
+        <p>Study anytime and anywhere with accessible course material and easy-to-follow lessons.</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>Affordable Education</h3>
+        <p>Get high-quality learning resources and guidance at a student-friendly cost.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-title">
+      <h2>What Students Say</h2>
+      <p>Feedback from learners who joined EduLearn.</p>
+    </div>
+
+    <div class="testimonial-container">
+      <div class="testimonial-card">
+        <p>
+          “EduLearn made web development easy to understand. The lessons were clear and helped
+          me build my first landing page project.”
+        </p>
+        <h4>- Anamika</h4>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          “The Java course was beginner-friendly and practical. I improved my coding basics
+          and gained confidence in making projects.”
+        </p>
+        <h4>- Rahul</h4>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          “I liked the clean teaching style and project-based learning approach. It really
+          helped me understand programming concepts better.”
+        </p>
+        <h4>- Priya</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta">
+    <div class="cta-box">
+      <h2>Start Learning Today</h2>
+      <p>
+        Join EduLearn and take the first step toward building your skills and career.
+      </p>
+      <a href="#contact" class="btn">Join Now</a>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact" id="contact">
+    <div class="section-title">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you.</p>
+    </div>
+
+    <div class="contact-box">
+      <p><strong>Email:</strong> info@edulearn.com</p>
+      <p><strong>Phone:</strong> +91 9876543210</p>
+      <p><strong>Address:</strong> Lucknow, Uttar Pradesh, India</p>
+      <a href="#" class="btn">Enroll Now</a>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>© 2026 EduLearn. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
